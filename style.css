@@ -1,0 +1,17 @@
+#navbar .menu a{
+    Font-family: "Inter";
+    Font-style: Medium;
+    font-weight: 500;
+    Font-size: 14px;
+    Line-height: 14px;
+    Line-height: 83%;
+    color:#656464;
+}
+#navbar .menu a.active{
+    color: #2B2B39;
+    font-weight: 700;
+}
+
+#navbar .menu a.hover {
+    color: blue;
+}

@@ -1,0 +1,570 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            fontFamily :{
+                'sans': ['Inter'],
+                'serif': ['Inter'],
+                'mono': ['Inter'],
+                'display': ['Inter'],
+                'body': ['Inter'],
+              },
+            container : {
+                center : true,
+                screens:{
+                    xl :'1170px',
+                },             
+            
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                
+              }
+              }
+            }
+          }
+        }
+      </script>
+      <style type="text/tailwindcss">
+        @layer utilities{
+            input{
+                font-family: "Inter";
+            }
+        }
+      </style>
+      <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+
+    <nav id="navbar" class="pb-[15px] border-b-[1px] w-full fixed bg-white/80">
+        <div class="container flex flex-wrap lg:flex-nowrap lg:gap-[70px] justify-between items-center px-[20px]">
+              
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <button data-collapse-toggle="navbar-defaults" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-defaults" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
+
+            <div id="navbar-defaults" class="hidden lg:block w-full">
+                <div class="flex flex-col md:flex-row gap-5 items-center justify-between">
+                    <div class="menu flex flex-col items-center  gap-[72px]">
+                        <ul class="flex items-center md:flex-row flex-col gap-8 ">
+                            <li class="">
+                                <a class="active" href="">Home</a>                    
+                            </li>
+                            <li>
+                                <div class="item-dropdown flex gap-[5px]">
+                                    <a href="#">Community</a>
+                                    <img src="img\icon\Vector.png" class="object-contain" alt="">
+                                </div>                   
+                            </li>
+                            <li>
+                                <a href="">Blog</a> 
+                            </li>
+                            <li>
+                                <a href="">Event</a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-action flex gap-[42px] flex-col items-center">
+                        <div class="search-box flex flex-col md:flex-row gap-2 items-center ">      
+                            <form class="mt-[20px] mr-[42px] justify-center flex border-[#E5E5E5] border-b-[1px]" action="#!">
+                                <img class="h-fit pt-[15px]" src="img/icon/MagnifyingGlass.png" alt="">
+                                <input class=" bg-transparent border-none w-[115px] focus:ring-transparent" type="text" placeholder="Search here...">
+                            </form>
+                            <div class="button mt-1 bg-[#217BF4] rounded-[14px] py-[18] text-white flex hover:drop-shadow-md hover:">
+                                    <button>
+                                        <span class="px-[44px] py-[18]">Login</span>
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="bg-gradient-to-br from-white to-[#D4E7FE] w-full">
+        <div class="container flex flex-wrap-reverse lg:flex-nowrap gap-5 justify-center lg:justify-between px-[20px]">
+            <div class="left pt-[215px] flex flex-col">
+                <div class="title bg-[#217BF4]/10 w-fit px-[30px] py-[12px] rounded-[8px]">
+                    <span class="text-[#217BF4]">Netbook community</span>
+                </div>
+                <h1 class="pt-[20px] text-[#0A093D] text-[56px] font-[700]">
+                    Your Solutions For Community!
+                </h1>
+                <p class="pt-[18px] text-[18px] text-[#656464] font-[400]">
+                    More than 2 billion people in over countries use socibook to stay in touch with friends & family.
+                </p>
+                <div class="button pt-[42px] flex ">
+                    <button class="bg-[#217BF4] text-[#FFFFFF] px-[42px] py-[24px] rounded-[14px]">
+                        About More
+                    </button>
+                    <button class="text-[#217BF4] px-[42px] py-[24px] border-[1px] border-[#217BF4] rounded-[14px]">
+                        Invite Friend
+                    </button>
+                </div>
+                
+            </div>
+            <div class="image pt-[84px] pb-[83px] flex">
+                <img src="img/Iamge.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="why" class="pt-[111px] w-full">
+        <div class="container gap-5 justify-between md:justify-center flex flex-wrap lg:flex-nowrap px-[20px]">
+            <div class="left pt-[208px] flex flex-col">
+                <span class="text-[#217BF4] font-[500] text-[18px] pb-[10px]">Whats Netboks?</span>
+                <div class="title pb-[16px] text-[#0A093D] text-[36px] font-[700]">Why Join Netbook Social Network?</div>
+                <p class="pb-[36px] text-[#656464] font-[400] text-[16px]">Recent surveys have indicated that small businesses recognise the need they have to connect with consumer.</p>
+                <ul class="text-[#171648] flex flex-col gap-[16px] text-[18px]">
+                    <li class="flex gap-[12px]">
+                        <img src="img/icon/list.png" alt="">
+                        Groups
+                    </li>
+                    <li class="flex gap-[12px]">
+                        <img src="img/icon/list.png" alt="">
+                        Messages
+                    </li>
+                    <li class="flex gap-[12px]">
+                        <img src="img/icon/list.png" alt="">
+                        Share
+                    </li>
+                </ul>
+            </div>
+            <div class="right gap-[29px] flex ">
+                <div class="box-image1 pt-[215px]">
+                    <img src="img/Image(1).png" alt="">
+                </div>
+                <div class="box-image2 pt-[145px] flex flex-col gap-[32px]">
+                    <img src="img/Image(2).png" alt="">
+                    <img src="img/Image(3).png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievement" class="mt-[139px]">
+        <div class="container flex flex-wrap lg:flex-nowrap gap-[22px] px-[20px]">
+            <div class="card rounded-[14px] flex flex-col pb-[40px] pt-[46px] border-[1px] pl-[42px] ">
+                <div class="title flex gap-[10px] pb-[36px]">
+                    <img src="img/icon/Vector(1).png" alt="">
+                    <span class="font-[500] text-[#0A093D] text-[20px]"> 4.8 Rating </span> 
+                </div>
+                <div class="sosmed flex pb-[43px]">
+                    <div class="profileimage flex">
+                        <img class="ml-[-20px]" src="img/Ellipse 13.png" alt="">
+                        <img class="ml-[-32px]" src="img/Ellipse 14.png" alt="">
+                        <img class="ml-[-32px]" src="img/Ellipse 15.png" alt="">
+                        <div class="text gap-[5px] font-[600] text-[18px] pt-[10px]">
+                            <span class="text-[#217BF4]">+863k </span> <span class="text-[#5D5B70]">Members</span> 
+                        </div>
+                    </div>
+                </div>
+                <p class="text-[#8C8C8C] font-[400] text-[18px] pb-[40px] pr-[20px]">
+                    More than 2 billion we people over countries use socibooks we to stay in touch with friends.
+                </p>
+                <div class="link flex gap-[8px]">
+                    <span class="text-[#217BF4]"><a href="">Join our Community</a>  </span>
+                    <div class="arrow pt-[9px] pl-[8px]">
+                        <img src="img/icon/ArrowRight.png" alt="">  
+                    </div>                 
+                </div>
+            </div>
+
+            <div class="card rounded-[14px] flex flex-col pb-[40px] pt-[46px] border-[1px] pl-[42px]">
+                <div class="title flex gap-[10px] pb-[39px]">
+                    <img src="img/icon/Trophy.png" alt="">
+                    <span class="font-[500] text-[#0A093D] text-[20px]"> Awwwards </span> 
+                </div>
+                <div class="sosmed flex pb-[43px]">
+                    <div class="profileimage flex">
+                        <img src="img/icon/Ellipse 14(1).png"alt="">
+                        <div class="text gap-[5px] font-[600] text-[18px] pt-[5px]">
+                            <span class="text-[#5D5B70]"> Best of  <span class="text-[#217BF4]">2021 </span> on Github</span>  
+                        </div>
+                    </div>
+                   
+                </div>
+                <p class="text-[#8C8C8C] font-[400] text-[18px] pb-[40px] pr-[20px]">
+                    More than 2 billion we people over countries use socibooks we to stay in touch with friends.
+                </p>
+                <div class="link flex gap-[8px]">
+                    <span class="text-[#4A4A56]"><a href="">Go To Awards</a></span>
+                    <div class="arrow pt-[9px] pl-[8px]">
+                        <img src="img/icon/ArrowRight.png" alt="">  
+                    </div>                 
+                </div>
+            </div>
+
+            <div class="card flex flex-col pl-[42px]">
+                <div class="title flex gap-[10px] pb-[39px] ">
+                    <img src="img/icon/Trophy.png" alt="">
+                    <span class="font-[500] text-[#0A093D] text-[20px]"> Our Achievement </span> 
+                </div>
+                <div class="sosmed flex pb-[18px]">
+                    <div class="profileimage flex">
+                        <div class="text font-[700] text-[36px] text-[#0A093D]">
+                            We are Connecting You The Digital Life.  
+                        </div>
+                    </div>
+                   
+                </div>
+                <p class="text-[#8C8C8C] font-[400] text-[18px] pb-[38px] pr-[42px]">
+                    The scope the Social Media becomes crucial Is helps the business to directly engage with their needs and wants.
+                </p>
+                <div class="link flex gap-[8px]">
+                    <Button class="flex bg-[#217BF4]  py-[22px] px-[38px] rounded-[14px]">
+                        <span class="text-[#FFFFFF] font-[500] text-[14px]"> Discover me </span> 
+                        <div class="arrow pt-[4px] pl-[20px]">
+                            <img src="img/icon/ArrowRight(1).png" alt="">  
+                        </div>
+                    </Button>           
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="pt-[183px] bg-[linear-gradient(0deg,_rgba(241,246,253,0)_1.63%,_#F1F6FD_20.5%,_#F1F6FD_58.57%,_#FFFFFF_100%)]">
+        <div class="container px-[10px]">
+            <div class="title text-center">
+                <span class="text-18px] font-[500] text-[#217BF4]">
+                    Our Community
+                </span>
+                <h3 class="text-[#0A093D] text-[36px] font-[700]">
+                    Community Main Feature
+                </h3>
+                <p class="text-[#656464] text-[16px] font-[400]">
+                    The wise man therefore always holds in these matters
+                    to this principle of selection.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="container flex gap-[44px] flex-wrap mt-[64px] justify-center px-[20px]">
+            
+            <div class="card bg w-full lg:w-5/12 flex gap-[36px] border-[1px] rounded-[14px]">
+                <div class="image shrink-0 mt-[46px] ml-[40px] py-[19px] px-[16px] rounded-[24px] bg-[linear-gradient(154.49deg,_#5CA1FE_6.61%,_#217BF4_89.72%)] h-fit w-fit">
+                    <img src="img/icon/Icon(6).png" alt="">
+                </div>
+                <div class="text flex flex-col">
+                <h4 class="font-[600] text-[24px] text-[#2F2C4A] pt-[46px]">
+                    Members, Friends
+                </h4>
+                <p class="pb-[44px] text-[16px] font-[400] text-[#656464]">
+                    Members, Friends Connection ( like followers ), Private Message
+                </p>
+                </div>
+            </div>
+
+            <div class="card w-full lg:w-5/12 flex gap-[36px] border-[1px] rounded-[14px]">
+                <div class="image shrink-0 mt-[46px] ml-[40px] py-[23px] px-[16px] rounded-[24px] bg-[linear-gradient(154.49deg,_#FF858A_6.61%,_#F04148_89.72%)] h-fit w-fit">
+                    <img src="img/icon/Group.png" alt="">
+                </div>
+                <div class="text flex flex-col">
+                <h4 class="font-[600] text-[24px] text-[#2F2C4A] pt-[46px]">
+                    Groups
+                </h4>
+                <p class="pb-[44px] text-[16px] font-[400] text-[#656464]">
+                    Your users can create groups to let other users to join and talk
+                </p>
+                </div>
+            </div>
+
+            <div class="card w-full lg:w-5/12 flex gap-[36px] border-[1px] rounded-[14px]">
+                <div class="image shrink-0 mt-[46px] ml-[40px] py-[20px] px-[16px] rounded-[24px] bg-[linear-gradient(154.49deg,_#FFD085_6.61%,_#FFAF2E_89.72%)] h-fit w-fit">
+                    <img src="img/icon/Icon(7).png" alt="">
+                </div>
+                <div class="text flex flex-col">
+                <h4 class="font-[600] text-[24px] text-[#2F2C4A] pt-[46px]">
+                    Forum
+                </h4>
+                <p class="pb-[44px] text-[16px] font-[400] text-[#656464]">
+                    Forum is ready by BBPress. Your users can make topics and talk.
+                </p>
+                </div>
+            </div>
+            
+            <div class="card w-full lg:w-5/12 flex gap-[36px] border-[1px] rounded-[14px]">
+                <div class="image shrink-0 mt-[46px] ml-[40px] py-[16px] px-[16px] rounded-[24px] bg-[linear-gradient(154.49deg,_#5CA1FE_6.61%,_#217BF4_89.72%)] h-fit">
+                    <img class="" src="img/icon/Icon(8).png" alt="">
+                </div>
+                <div class="text flex flex-col">
+                <h4 class="font-[600] text-[24px] text-[#2F2C4A] pt-[46px]">
+                    Custom Module
+                </h4>
+                <p class="pb-[44px] text-[16px] font-[400] text-[#656464]">
+                    You can create Members, Groups Module. We already created 3 modules. It's by drag & drop live builder.
+                </p>
+                </div>
+            </div>
+
+            <div class="card w-full lg:w-5/12 flex gap-[36px] border-[1px] rounded-[14px]">
+                <div class="image shrink-0 mt-[46px] ml-[40px] py-[16px] px-[20px] rounded-[24px] bg-[linear-gradient(154.49deg,_#FF858A_6.61%,_#F04148_89.72%)] h-fit w-fit">
+                    <img src="img/icon/Vector(2).png" alt="">
+                </div>
+                <div class="text flex flex-col">
+                <h4 class="font-[600] text-[24px] text-[#2F2C4A] pt-[46px]">
+                    List Builder
+                </h4>
+                <p class="pb-[44px] text-[16px] font-[400] text-[#656464]">
+                    Members, Groups list can be modified by drag & drop live builder.
+                </p>
+                </div>
+            </div>
+
+            <div class="card w-full lg:w-5/12 flex gap-[36px] border-[1px] rounded-[14px]">
+                <div class="image shrink-0 mt-[46px] ml-[40px] py-[16px] px-[16px] rounded-[24px] bg-[linear-gradient(154.49deg,_#FFD085_6.61%,_#FFAF2E_89.72%)] h-fit w-fit">
+                    <img src="img/icon/Vector(3).png" alt="">
+                </div>
+                <div class="text flex flex-col">
+                <h4 class="font-[600] text-[24px] text-[#2F2C4A] pt-[46px]">
+                    List Scroll Effects
+                </h4>
+                <p class="pb-[44px] text-[16px] font-[400] text-[#656464]">
+                    8 different scroll effects are ready. You can always change by your tastes.
+                </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="team" class="pt-[210px]">
+        <div class="container text-center px-[20px]">
+            <div class="text ">
+                <span class="text-[#217BF4] text-[18px] font-[500]">
+                    Valuable Team
+                </span>
+                <h4 class="text-[#0A093D] font-[700] text-[36px] ">
+                    Our Active Members
+                </h4>
+                <p class="text-[#656464] font-[400] text-[16px]">
+                    when an unknown printer took a galley of type and meeting fari scrambled it.
+                </p>
+            </div>
+        </div>
+        
+        <div class="container flex justify-center pt-[38px] px-[20px]">
+            <div class="bar bg-[#217BF4]/[0.06] rounded-[14px] w-fit flex">
+                <button class="py-5 px-[30px] font-[600] ">Newest</button>
+                <button class="py-5 px-[30px] font-[600] ">Active</button>
+                <button class="py-5 px-[30px] font-[600] ">Popular</button>
+            </div>
+        </div>
+
+        <div class="container mx-auto flex pt-[44px] flex-wrap justify-center">
+            <div class=" py-[30px] px-[52px] w-fit flex flex-col items-center border border-slate-100 rounded-lg">
+                <div class="image mb-[29px] relative">
+                    <img class=" rounded-full absolute top-[15px] right-[15px] bg-[#DEE9FB]" src="img/imagepeople/profile1.png" alt="">
+                    <img class=" " src="img/imagepeople/Ellipse22.png" alt="">
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center justify-center">
+                        <i class="fa-sharp fa-solid fa-circle-check text-2xl text-blue-600 absolute">
+                            <img class="bg-[#217BF4] mt-[-20px] px-[6px] py-[6px] rounded-full" src="img/imagepeople/Check.png" alt="">   
+                        </i>
+                        <div class="w-6 h-6 bg-white rounded-full"></div>
+                      </div>
+                </div>
+                <span class="pt-[29px] text-[#2F2C4A] text-[24px] font-[600]">Fahim Rahman</span>
+                <span class="pt-[14px] pb-[30px] text-[#656464] text-[16px] font-[400]">@rahman</span>
+            </div>
+            <div class=" py-[30px] px-[52px] w-fit flex flex-col items-center border border-slate-100 rounded-lg">
+                <div class="image mb-[29px] relative">
+                    <img class=" rounded-full absolute top-[15px] right-[15px] bg-[#DEE9FB]" src="img/imagepeople/image 298.png" alt="">
+                    <img class=" " src="img/imagepeople/Ellipse22.png" alt="">
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center justify-center">
+                        <i class="fa-sharp fa-solid fa-circle-check text-2xl text-blue-600 absolute">
+                            <img class="bg-[#217BF4] mt-[-20px] px-[6px] py-[6px] rounded-full" src="img/imagepeople/Check.png" alt="">   
+                        </i>
+                        <div class="w-6 h-6 bg-white rounded-full"></div>
+                      </div>
+                </div>
+                <span class="pt-[29px] text-[#2F2C4A] text-[24px] font-[600]">Kazi Rahman</span>
+                <span class="pt-[14px] pb-[30px] text-[#656464] text-[16px] font-[400]">@rahman</span>
+            </div>
+            <div class=" py-[30px] px-[52px] w-fit flex flex-col items-center border border-slate-100 rounded-lg">
+                <div class="image mb-[29px] relative">
+                    <img class=" rounded-full absolute top-[15px] right-[15px] bg-[#DEE9FB]"class=" rounded-full absolute top-[15px] right-[15px] bg-[#DEE9FB]" src="img/imagepeople/image 299.png" alt="">
+                    <img class=" " src="img/imagepeople/Ellipse22.png" alt="">
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center justify-center">
+                        <i class="fa-sharp fa-solid fa-circle-check text-2xl text-blue-600 absolute">
+                            <img class="bg-[#217BF4] mt-[-20px] px-[6px] py-[6px] rounded-full" src="img/imagepeople/Check.png" alt="">   
+                        </i>
+                        <div class="w-6 h-6 bg-white rounded-full"></div>
+                      </div>
+                </div>
+                <span class="pt-[29px] text-[#2F2C4A] text-[24px] font-[600]">Masterero Ali</span>
+                <span class="pt-[14px] pb-[30px] text-[#656464] text-[16px] font-[400]">@Master</span>
+            </div>
+            <div class=" py-[30px] px-[52px] w-fit flex flex-col items-center border border-slate-100 rounded-lg">
+                <div class="image mb-[29px] relative">
+                    <img class=" rounded-full absolute top-[15px] right-[15px] bg-[#DEE9FB]" src="img/imagepeople/Check(1).png" alt="">
+                    <img class="" src="img/imagepeople/Ellipse22.png" alt="">
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center justify-center">
+                        <i class="absolute">
+                            <img class="bg-[#217BF4] mt-[-20px] px-[6px] py-[6px] rounded-full" src="img/imagepeople/Check.png" alt="">   
+                        </i>
+                        <div class="w-6 h-6 bg-white rounded-full"></div>
+                      </div>
+                </div>
+                <span class="pt-[29px] text-[#2F2C4A] text-[24px] font-[600]">Alia Karon</span>
+                <span class="pt-[14px] pb-[30px] text-[#656464] text-[16px] font-[400]">@Alia</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="application" class="bg-[#E5F0FD] mt-[130px]">
+        <div class="container flex justify-between">
+            <div class="get pr-[35] flex flex-wrap lg:flex-nowrap">
+                <div class=" py-[122px] px-[20px]">
+                    <span class="text-18px] font-[500] text-[#217BF4]">Get Our Aplication</span>
+                    <h4 class="text-[#0A093D] font-[700] text-[36px] ">You Can Easily Find This App…!</h4>
+                    <p class="text-[#656464] font-[400] text-[16px]">I say chap that's suing lavatory chip shop gosh off his smashing boot are you taking the piss posh loo brilliant.</p>
+                    <div class="image flex">
+                        <img src="img/icon/image 288(1).png" alt="">
+                        <img class=" h-fit pt-[22px]" src="img/icon/image 289.png" alt="">
+                    </div>
+                </div>
+                <div class="store flex ">
+                    <img src="img/mobile muckup.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="pt-[130px]">
+        <div class="container flex flex-wrap justify-center">
+            <div class="text flex flex-col text-center">
+                <span class="text-18px] font-[500] text-[#217BF4]">Get Our Aplication</span>
+                <h4 class="text-[#0A093D] font-[700] text-[36px]">Latest News</h4>
+            </div>
+        </div>
+        
+        <div class="container flex flex-wrap lg:flex-nowrap justify-center gap-[75px] pl-[25px]">
+            <div class="article pt-[80px]">
+                <img src="img/Image(8).png" alt="">
+                <div class=" article-title flex gap-[14px]">
+                    <img class="pt-[46px] w-fit h-fit " src="img/icon/Line 3.png" alt="">
+                    <span class="text-[#2F2C4A] text-[20px] font-[600] pt-[26px]">It Does Not Matter Hows Slowly go as Long</span>
+                </div>
+                <div class="continue pl-[50px] pt-[24px]">
+                    <a href="" class="text-[#656464] text-[16px] font-[400] pt-[24px]">Continue Reading -></a>
+                    <img src="" alt=""> 
+                </div>
+            </div>
+            <div class="article pt-[80px]">
+                <img src="img/Image(9).png" alt="">
+                <div class=" article-title flex gap-[14px]">
+                    <img class="pt-[46px] w-fit h-fit " src="img/icon/Line 3.png" alt="">
+                    <span class="text-[#2F2C4A] text-[20px] font-[600] pt-[26px]">Netbook Network Added New Photo Filter</span>
+                </div>
+                <div class="continue pl-[50px] pt-[24px]">
+                    <a href="" class="text-[#656464] text-[16px] font-[400] pt-[24px]">Continue Reading -></a>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="article pt-[80px]">
+                <img src="img/Image(10).png" alt="">
+                <div class=" article-title flex gap-[14px]">
+                    <img class="pt-[46px] w-fit h-fit " src="img/icon/Line 3.png" alt="">
+                    <span class="text-[#2F2C4A] text-[20px] font-[600] pt-[26px]">We Optimised Netbooks Better Navigation</span>
+                </div>
+                <div class="continue pl-[50px] pt-[24px]">
+                    <a href="" class="text-[#656464] text-[16px] font-[400] pt-[24px]">Continue Reading -></a>
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" class="bg-[#2B2B39] mt-[140px] pb-[85px]">
+        <div class="container flex flex-wrap gap-[50px] justify-center lg:justify-between px-[20px]">
+            <div class="inside text-[#ffffff] flex flex-col">
+                <div class="title pt-[78px] pb-[42px]">
+                    <span class="font-[500] text-[20px]">Home</span>
+                </div>
+                <div class="isi flex flex-col gap-[34px] font-[400] text-[16px]">
+                    <span>Home</span>
+                    <span>Community</span>
+                    <span>Events</span>
+                    <span>Contact</span>
+                </div>
+            </div>
+            <div class="inside text-[#ffffff] flex flex-col">
+                <div class="title pt-[78px] pb-[42px]">
+                    <span class="font-[500] text-[20px]">Resources</span>
+                </div>
+                <div class="isi flex flex-col gap-[34px] font-[400] text-[16px]">
+                    <span>Blog</span>
+                    <span>News</span>
+                    <span>Guides</span>
+                    <span>Help Center</span>
+                </div>
+            </div>
+            <div class="inside text-[#ffffff] flex flex-col">
+                <div class="title pt-[78px] pb-[42px]">
+                    <span class="font-[500] text-[20px]">Community</span>
+                </div>
+                <div class="isi flex flex-col gap-[34px] font-[400] text-[16px]">
+                    <span>NewsFeed</span>
+                    <span>Profile</span>
+                    <span>Friends</span>
+                    <span>Forums</span>
+                </div>
+            </div>
+            <div class="inside text-[#ffffff] flex flex-col shrink-0">
+                <div class="title pt-[78px] pb-[42px]">
+                    <span class="font-[500] text-[20px]">Main links</span>
+                </div>
+                <div class="isi flex flex-col gap-[34px] font-[400] text-[16px]">
+                    <span>Members</span>
+                    <span>Activity</span>
+                    <span>Groups</span>
+                    <span>Private Group</span>
+                </div>
+            </div>
+            <div class="inside text-[#ffffff] flex flex-col px-[50px] w-[339px]">
+                <div class="title pt-[78px] pb-[42px]">
+                    <span class="font-[500] text-[20px]">Subscribe Cirkle Newsletter</span>
+                </div>
+                <div class="isi flex flex-col gap-[34px] font-[400] text-[16px]">
+                    <span>Subscribe to be the first one to know about updates. Enter your email</span>
+                        <form action="" class="rounded-[12px] border-[1px] flex">
+                            <input class="bg-transparent border-none text-[white] w-[155px]" type="text" placeholder="Email Address">
+                            <button class="bg-white text-[#2B2B39] px-[24px] py-[16px] rounded-[12px]"> Subscribe</button>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bottom-footer" class="bg-[#20202D] py-[41px] px-[20px]">
+        <div class="container flex flex-wrap justify-between">
+            <span class="text-[#F6F6F6] text-[14px] font-[400]"> Besnik Creative Agency. </span>
+            <img src="img/logo.png" alt="">
+            <div class="sosmed flex gap-[8px]">
+                <img class="bg-white py-[7px] px-[7px] rounded-full" src="img/icon/twitter1.png" alt="">
+                <img class="bg-white py-[7px] px-[7px] rounded-full" src="img/icon/ig.png" alt="">
+                <img class="bg-white py-[7px] px-[7px] rounded-full" src="img/icon/Frame.png" alt="">
+                <img class="bg-white py-[7px] px-[7px] rounded-full" src="img/icon/Linkedin(1).png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+</body>
+</html>
